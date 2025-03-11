@@ -1,0 +1,1369 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+       <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      <!-- Base Styles -->
+      <style>
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="4e9dfde1-88f5-4dcd-910e-ddc9e81edae3" data-section-id="4e9dfde1-88f5-4dcd-910e-ddc9e81edae3">
+
+<htmlCode>
+<div id="root">
+  <section id="navbar" class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+    <div class="container mx-auto px-4">
+      <nav class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <i class="text-2xl text-green-600 fa-solid fa-leaf"></i>
+          <span class="text-2xl font-bold text-green-800">Maali</span>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center space-x-8">
+          <a href="#" class="text-gray-700 hover:text-green-600 transition-colors duration-300">Home</a>
+          <a href="#" class="text-gray-700 hover:text-green-600 transition-colors duration-300">Shop</a>
+          <a href="#" class="text-gray-700 hover:text-green-600 transition-colors duration-300">Services</a>
+          <a href="#" class="text-gray-700 hover:text-green-600 transition-colors duration-300">Blog</a>
+          <a href="#" class="text-gray-700 hover:text-green-600 transition-colors duration-300">Contact</a>
+        </div>
+
+        <!-- Action Icons -->
+        <div class="flex items-center space-x-6">
+          <button class="text-gray-700 hover:text-green-600 transition-colors duration-300">
+            <i class="fa-solid fa-magnifying-glass text-xl"></i>
+          </button>
+          <button class="text-gray-700 hover:text-green-600 transition-colors duration-300">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+          <button class="text-gray-700 hover:text-green-600 transition-colors duration-300 relative">
+            <i class="fa-solid fa-cart-shopping text-xl"></i>
+            <span class="absolute -top-2 -right-2 bg-green-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">3</span>
+          </button>
+          <button class="lg:hidden text-gray-700 hover:text-green-600 transition-colors duration-300">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="lg:hidden hidden">
+      <div class="px-4 py-3 space-y-3">
+        <a href="#" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Home</a>
+        <a href="#" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Shop</a>
+        <a href="#" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Services</a>
+        <a href="#" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Blog</a>
+        <a href="#" class="block text-gray-700 hover:text-green-600 transition-colors duration-300">Contact</a>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="c196a92e-bcd8-4d92-bd35-dc67da037888" data-section-id="c196a92e-bcd8-4d92-bd35-dc67da037888">
+
+<htmlCode>
+<div id="root">
+  <section id="hero" class="relative min-h-screen pt-20 bg-green-50">
+    <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center justify-between py-16">
+      <!-- Text Content -->
+      <div class="lg:w-1/2 z-10 space-y-6 text-center lg:text-left mb-12 lg:mb-0">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-green-800 leading-tight animate-fade-in">
+          Bring Nature <span class="text-green-600">Home</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 max-w-xl mx-auto lg:mx-0">
+          Transform your living space into a thriving garden oasis with our expert plant care services and premium gardening supplies.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <button class="px-8 py-4 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-leaf"></i>
+            Shop Plants
+          </button>
+          <button class="px-8 py-4 border-2 border-green-600 text-green-600 rounded-full hover:bg-green-50 transition duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-calendar-check"></i>
+            Book Service
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="lg:w-1/2 grid grid-cols-2 gap-4 lg:gap-6">
+        <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+          <i class="fa-solid fa-tree text-3xl text-green-600 mb-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">1000+</h3>
+          <p class="text-gray-600">Plants Delivered</p>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+          <i class="fa-solid fa-house-user text-3xl text-green-600 mb-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">500+</h3>
+          <p class="text-gray-600">Home Gardens</p>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+          <i class="fa-solid fa-users text-3xl text-green-600 mb-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">50+</h3>
+          <p class="text-gray-600">Expert Gardeners</p>
+        </div>
+        <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg transform hover:scale-105 transition duration-300">
+          <i class="fa-solid fa-star text-3xl text-green-600 mb-3"></i>
+          <h3 class="text-2xl font-bold text-green-800">4.8</h3>
+          <p class="text-gray-600">Customer Rating</p>
+        </div>
+      </div>
+
+      <!-- Decorative Elements -->
+      <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none transform rotate-180">
+        <svg class="relative block w-full h-24" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-white"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="c7201e34-a0d1-48b0-8501-e5fe997ba283" data-section-id="c7201e34-a0d1-48b0-8501-e5fe997ba283">
+
+<htmlCode>
+<div id="root">
+  <section id="featured-products" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Featured Plants</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Discover our carefully curated selection of indoor and outdoor plants to bring life to your space.</p>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Product Card 1 -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+          <div class="relative overflow-hidden rounded-t-2xl">
+            <div class="aspect-square bg-green-100"></div>
+            <div class="absolute top-4 right-4">
+              <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-green-50 transition-colors duration-300">
+                <i class="fa-regular fa-heart text-green-600"></i>
+              </button>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-green-800 mb-2">Snake Plant</h3>
+            <p class="text-gray-600 mb-4">Low-maintenance indoor plant</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xl font-bold text-green-600">$29.99</span>
+              <button class="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-300 flex items-center gap-2">
+                <i class="fa-solid fa-cart-plus"></i>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+          <div class="relative overflow-hidden rounded-t-2xl">
+            <div class="aspect-square bg-green-100"></div>
+            <div class="absolute top-4 right-4">
+              <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-green-50 transition-colors duration-300">
+                <i class="fa-regular fa-heart text-green-600"></i>
+              </button>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-green-800 mb-2">Peace Lily</h3>
+            <p class="text-gray-600 mb-4">Air-purifying beauty</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xl font-bold text-green-600">$34.99</span>
+              <button class="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-300 flex items-center gap-2">
+                <i class="fa-solid fa-cart-plus"></i>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+          <div class="relative overflow-hidden rounded-t-2xl">
+            <div class="aspect-square bg-green-100"></div>
+            <div class="absolute top-4 right-4">
+              <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-green-50 transition-colors duration-300">
+                <i class="fa-regular fa-heart text-green-600"></i>
+              </button>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-green-800 mb-2">Monstera</h3>
+            <p class="text-gray-600 mb-4">Tropical statement piece</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xl font-bold text-green-600">$49.99</span>
+              <button class="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-300 flex items-center gap-2">
+                <i class="fa-solid fa-cart-plus"></i>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 group">
+          <div class="relative overflow-hidden rounded-t-2xl">
+            <div class="aspect-square bg-green-100"></div>
+            <div class="absolute top-4 right-4">
+              <button class="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-green-50 transition-colors duration-300">
+                <i class="fa-regular fa-heart text-green-600"></i>
+              </button>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-lg font-semibold text-green-800 mb-2">Fiddle Leaf Fig</h3>
+            <p class="text-gray-600 mb-4">Popular indoor tree</p>
+            <div class="flex items-center justify-between">
+              <span class="text-xl font-bold text-green-600">$59.99</span>
+              <button class="px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-300 flex items-center gap-2">
+                <i class="fa-solid fa-cart-plus"></i>
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- View All Button -->
+      <div class="text-center mt-12">
+        <button class="px-8 py-4 border-2 border-green-600 text-green-600 rounded-full hover:bg-green-50 transition duration-300 inline-flex items-center gap-2">
+          View All Products
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="817a2d1a-7ac8-4f36-a0a0-292da115c796" data-section-id="817a2d1a-7ac8-4f36-a0a0-292da115c796">
+
+<htmlCode>
+<div id="root">
+  <section id="services" class="py-16 bg-green-50">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Our Professional Services</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Expert garden services tailored to your needs, from initial setup to ongoing maintenance.</p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service Card 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+            <i class="fa-solid fa-seedling text-2xl text-green-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-green-800 mb-4">Garden Setup</h3>
+          <p class="text-gray-600 mb-6">Professional installation of home gardens, including soil preparation, plant selection, and layout design.</p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-check text-green-600"></i>
+              <span class="text-gray-600">Custom garden design</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-check text-green-600"></i>
+              <span class="text-gray-600">Expert plant selection</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-check text-green-600"></i>
+              <span class="text-gray-600">Professional installation</span>
+            </li>
+          </ul>
+          <button class="w-full py-3 border-2 border-green-600 text-green-600 rounded-full hover:bg-green-50 transition duration-300">Learn More</button>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+            <i class="fa-solid fa-hand-holding-heart text-2xl text-green-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-green-800 mb-4">Plant Care</h3>
+          <p class="text-gray-600 mb-6">Regular maintenance services to keep your plants healthy and thriving throughout the year.</p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-check text-green-600"></i>
+              <span class="text-gray-600">Regular watering</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-check text-green-600"></i>
+              <span class="text-gray-600">Pruning & trimming</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-check text-green-600"></i>
+              <span class="text-gray-600">Health monitoring</span>
+            </li>
+          </ul>
+          <button class="w-full py-3 border-2 border-green-600 text-green-600 rounded-full hover:bg-green-50 transition duration-300">Learn More</button>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+          <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+            <i class="fa-solid fa-book text-2xl text-green-600"></i>
+          </div>
+          <h3 class="text-xl font-bold text-green-800 mb-4">Consultation</h3>
+          <p class="text-gray-600 mb-6">Expert advice and guidance for maintaining a thriving garden in any space.</p>
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-check text-green-600"></i>
+              <span class="text-gray-600">Expert guidance</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-check text-green-600"></i>
+              <span class="text-gray-600">Plant care tips</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-check text-green-600"></i>
+              <span class="text-gray-600">Problem solving</span>
+            </li>
+          </ul>
+          <button class="w-full py-3 border-2 border-green-600 text-green-600 rounded-full hover:bg-green-50 transition duration-300">Learn More</button>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-12">
+        <button class="px-8 py-4 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-300 inline-flex items-center gap-2">
+          <i class="fa-solid fa-calendar"></i>
+          Schedule a Service
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="572af50d-b954-41b5-a614-f9d3c4a0ae72" data-section-id="572af50d-b954-41b5-a614-f9d3c4a0ae72">
+
+<htmlCode>
+<div id="root">
+  <section id="shop-categories" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Shop by Category</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Explore our wide range of gardening essentials and beautiful plants.</p>
+      </div>
+
+      <!-- Categories Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Category 1 -->
+        <div class="group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl aspect-square bg-green-100 mb-4">
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-white text-lg font-semibold">Shop Now</span>
+            </div>
+          </div>
+          <h3 class="text-center text-lg font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Indoor Plants</h3>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl aspect-square bg-green-100 mb-4">
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-white text-lg font-semibold">Shop Now</span>
+            </div>
+          </div>
+          <h3 class="text-center text-lg font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Garden Tools</h3>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl aspect-square bg-green-100 mb-4">
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-white text-lg font-semibold">Shop Now</span>
+            </div>
+          </div>
+          <h3 class="text-center text-lg font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Plant Pots</h3>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl aspect-square bg-green-100 mb-4">
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-white text-lg font-semibold">Shop Now</span>
+            </div>
+          </div>
+          <h3 class="text-center text-lg font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Soil & Fertilizers</h3>
+        </div>
+
+        <!-- Category 5 -->
+        <div class="group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl aspect-square bg-green-100 mb-4">
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-white text-lg font-semibold">Shop Now</span>
+            </div>
+          </div>
+          <h3 class="text-center text-lg font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Seeds</h3>
+        </div>
+
+        <!-- Category 6 -->
+        <div class="group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl aspect-square bg-green-100 mb-4">
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-white text-lg font-semibold">Shop Now</span>
+            </div>
+          </div>
+          <h3 class="text-center text-lg font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Outdoor Plants</h3>
+        </div>
+
+        <!-- Category 7 -->
+        <div class="group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl aspect-square bg-green-100 mb-4">
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-white text-lg font-semibold">Shop Now</span>
+            </div>
+          </div>
+          <h3 class="text-center text-lg font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Care Accessories</h3>
+        </div>
+
+        <!-- Category 8 -->
+        <div class="group cursor-pointer">
+          <div class="relative overflow-hidden rounded-2xl aspect-square bg-green-100 mb-4">
+            <div class="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span class="text-white text-lg font-semibold">Shop Now</span>
+            </div>
+          </div>
+          <h3 class="text-center text-lg font-semibold text-green-800 group-hover:text-green-600 transition-colors duration-300">Plant Food</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="74b9087b-3713-4b99-b938-577835fb485f" data-section-id="74b9087b-3713-4b99-b938-577835fb485f">
+
+<htmlCode>
+<div id="root">
+  <section id="how-it-works" class="py-16 bg-green-50">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">How It Works</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Transform your space into a green paradise in four simple steps</p>
+      </div>
+
+      <!-- Steps Container -->
+      <div class="relative">
+        <!-- Connection Line (Desktop) -->
+        <div class="hidden lg:block absolute top-1/2 left-0 w-full h-0.5 bg-green-200 -translate-y-1/2 z-0"></div>
+
+        <!-- Steps Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 relative z-10">
+          <!-- Step 1 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-6">
+              <i class="fa-solid fa-magnifying-glass text-3xl text-green-600"></i>
+            </div>
+            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4 font-bold text-green-600">1</div>
+            <h3 class="text-xl font-bold text-green-800 mb-3">Browse & Select</h3>
+            <p class="text-gray-600">Choose from our wide range of plants and garden supplies</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-6">
+              <i class="fa-solid fa-calendar-check text-3xl text-green-600"></i>
+            </div>
+            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4 font-bold text-green-600">2</div>
+            <h3 class="text-xl font-bold text-green-800 mb-3">Schedule Service</h3>
+            <p class="text-gray-600">Book a convenient time for delivery or consultation</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-6">
+              <i class="fa-solid fa-truck text-3xl text-green-600"></i>
+            </div>
+            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4 font-bold text-green-600">3</div>
+            <h3 class="text-xl font-bold text-green-800 mb-3">Expert Delivery</h3>
+            <p class="text-gray-600">Our team carefully delivers and sets up your garden</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex flex-col items-center text-center">
+            <div class="w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center mb-6">
+              <i class="fa-solid fa-heart text-3xl text-green-600"></i>
+            </div>
+            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4 font-bold text-green-600">4</div>
+            <h3 class="text-xl font-bold text-green-800 mb-3">Enjoy & Grow</h3>
+            <p class="text-gray-600">Watch your garden thrive with our ongoing support</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-16">
+        <button class="px-8 py-4 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-300 inline-flex items-center gap-2">
+          <i class="fa-solid fa-leaf"></i>
+          Start Your Garden Journey
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="3611eb02-d42c-40d1-9694-fc1d0e45f849" data-section-id="3611eb02-d42c-40d1-9694-fc1d0e45f849">
+
+<htmlCode>
+<div id="root">
+  <section id="testimonials" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">What Our Customers Say</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Hear from our happy plant parents and garden enthusiasts</p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-green-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <div class="flex items-center mb-6">
+            <img src="https://avatar.iran.liara.run/public" alt="Customer Avatar" class="w-16 h-16 rounded-full object-cover mr-4" />
+            <div>
+              <h3 class="font-bold text-green-800">Sarah Johnson</h3>
+              <p class="text-gray-600">Home Gardener</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fa-solid fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 italic">"Maali transformed my balcony into a stunning green oasis. Their expert guidance and plant selection were perfect for my space."</p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-green-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <div class="flex items-center mb-6">
+            <img src="https://avatar.iran.liara.run/public" alt="Customer Avatar" class="w-16 h-16 rounded-full object-cover mr-4" />
+            <div>
+              <h3 class="font-bold text-green-800">Michael Chen</h3>
+              <p class="text-gray-600">Urban Gardener</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fa-solid fa-star text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 italic">"The ongoing maintenance service is fantastic. My plants have never looked better, and the team is always professional."</p>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-green-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <div class="flex items-center mb-6">
+            <img src="https://avatar.iran.liara.run/public" alt="Customer Avatar" class="w-16 h-16 rounded-full object-cover mr-4" />
+            <div>
+              <h3 class="font-bold text-green-800">Emma Wilson</h3>
+              <p class="text-gray-600">Indoor Plant Enthusiast</p>
+            </div>
+          </div>
+          <div class="mb-4">
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fa-solid fa-star text-yellow-400"></i>
+            <i class="fa-solid fa-star-half-stroke text-yellow-400"></i>
+          </div>
+          <p class="text-gray-600 italic">"The quality of plants and care instructions are exceptional. I've learned so much about plant care through Maali's service."</p>
+        </div>
+      </div>
+
+      <!-- Trust Indicators -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div class="space-y-2">
+          <div class="text-3xl font-bold text-green-800">1000+</div>
+          <p class="text-gray-600">Happy Customers</p>
+        </div>
+        <div class="space-y-2">
+          <div class="text-3xl font-bold text-green-800">5000+</div>
+          <p class="text-gray-600">Plants Delivered</p>
+        </div>
+        <div class="space-y-2">
+          <div class="text-3xl font-bold text-green-800">4.9</div>
+          <p class="text-gray-600">Average Rating</p>
+        </div>
+        <div class="space-y-2">
+          <div class="text-3xl font-bold text-green-800">98%</div>
+          <p class="text-gray-600">Success Rate</p>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-12">
+        <button class="px-8 py-4 bg-green-600 text-white rounded-full hover:bg-green-700 transition duration-300 inline-flex items-center gap-2">
+          <i class="fa-solid fa-pen"></i>
+          Share Your Experience
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="0dd4adb2-1122-4945-a85d-8bbd22f252d6" data-section-id="0dd4adb2-1122-4945-a85d-8bbd22f252d6">
+
+<htmlCode>
+<div id="root">
+  <section id="blog-preview" class="py-16 bg-green-50">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Gardening Tips & Insights</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Discover expert advice and tips for maintaining your garden paradise</p>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Blog Post 1 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="relative">
+            <div class="aspect-video bg-green-100"></div>
+            <div class="absolute top-4 left-4">
+              <span class="bg-green-600 text-white px-4 py-1 rounded-full text-sm">Care Tips</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
+              <span class="flex items-center gap-2">
+                <i class="fa-regular fa-calendar"></i>
+                May 15, 2024
+              </span>
+              <span class="flex items-center gap-2">
+                <i class="fa-regular fa-clock"></i>
+                5 min read
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-green-800 mb-3 hover:text-green-600 transition-colors duration-300">
+              10 Essential Tips for Indoor Plant Care
+            </h3>
+            <p class="text-gray-600 mb-4">Learn the fundamental practices to keep your indoor plants thriving year-round.</p>
+            <a href="#" class="inline-flex items-center text-green-600 hover:text-green-700 transition-colors duration-300">
+              Read More
+              <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="relative">
+            <div class="aspect-video bg-green-100"></div>
+            <div class="absolute top-4 left-4">
+              <span class="bg-green-600 text-white px-4 py-1 rounded-full text-sm">Garden Design</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
+              <span class="flex items-center gap-2">
+                <i class="fa-regular fa-calendar"></i>
+                May 12, 2024
+              </span>
+              <span class="flex items-center gap-2">
+                <i class="fa-regular fa-clock"></i>
+                7 min read
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-green-800 mb-3 hover:text-green-600 transition-colors duration-300">
+              Creating a Sustainable Balcony Garden
+            </h3>
+            <p class="text-gray-600 mb-4">Transform your balcony into a thriving eco-friendly garden with these expert tips.</p>
+            <a href="#" class="inline-flex items-center text-green-600 hover:text-green-700 transition-colors duration-300">
+              Read More
+              <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <div class="relative">
+            <div class="aspect-video bg-green-100"></div>
+            <div class="absolute top-4 left-4">
+              <span class="bg-green-600 text-white px-4 py-1 rounded-full text-sm">Seasonal</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-4 mb-4 text-sm text-gray-600">
+              <span class="flex items-center gap-2">
+                <i class="fa-regular fa-calendar"></i>
+                May 10, 2024
+              </span>
+              <span class="flex items-center gap-2">
+                <i class="fa-regular fa-clock"></i>
+                4 min read
+              </span>
+            </div>
+            <h3 class="text-xl font-bold text-green-800 mb-3 hover:text-green-600 transition-colors duration-300">
+              Spring Gardening: What to Plant Now
+            </h3>
+            <p class="text-gray-600 mb-4">Discover the perfect plants and flowers to add to your garden this spring season.</p>
+            <a href="#" class="inline-flex items-center text-green-600 hover:text-green-700 transition-colors duration-300">
+              Read More
+              <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- View All Button -->
+      <div class="text-center mt-12">
+        <button class="px-8 py-4 border-2 border-green-600 text-green-600 rounded-full hover:bg-green-50 transition duration-300 inline-flex items-center gap-2">
+          View All Articles
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="25712a4b-ad5b-4975-98aa-50d4d76c8eac" data-section-id="25712a4b-ad5b-4975-98aa-50d4d76c8eac">
+
+<htmlCode>
+<div id="root">
+  <section id="consultation-form" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Content -->
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">Get Expert Garden Consultation</h2>
+              <p class="text-gray-600">Schedule a free consultation with our garden experts and start your green journey today.</p>
+            </div>
+
+            <div class="space-y-4">
+              <!-- Feature 1 -->
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <i class="fa-solid fa-user-gear text-xl text-green-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-green-800 mb-1">Expert Guidance</h3>
+                  <p class="text-gray-600">Personalized advice from certified garden specialists</p>
+                </div>
+              </div>
+
+              <!-- Feature 2 -->
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <i class="fa-solid fa-clipboard-list text-xl text-green-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-green-800 mb-1">Custom Plan</h3>
+                  <p class="text-gray-600">Tailored garden design and maintenance schedule</p>
+                </div>
+              </div>
+
+              <!-- Feature 3 -->
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                  <i class="fa-solid fa-handshake text-xl text-green-600"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-green-800 mb-1">Ongoing Support</h3>
+                  <p class="text-gray-600">Continuous assistance and care recommendations</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Form -->
+          <div class="bg-green-50 p-8 rounded-2xl shadow-lg">
+            <form class="space-y-6">
+              <div class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-gray-700 mb-2" for="first-name">First Name</label>
+                    <input type="text" id="first-name" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all" placeholder="Enter first name" />
+                  </div>
+                  <div>
+                    <label class="block text-gray-700 mb-2" for="last-name">Last Name</label>
+                    <input type="text" id="last-name" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all" placeholder="Enter last name" />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-gray-700 mb-2" for="email">Email</label>
+                  <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all" placeholder="Enter your email" />
+                </div>
+
+                <div>
+                  <label class="block text-gray-700 mb-2" for="phone">Phone Number</label>
+                  <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all" placeholder="Enter phone number" />
+                </div>
+
+                <div>
+                  <label class="block text-gray-700 mb-2" for="service">Service Interested In</label>
+                  <select id="service" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all">
+                    <option value="">Select a service</option>
+                    <option value="garden-setup">Garden Setup</option>
+                    <option value="maintenance">Garden Maintenance</option>
+                    <option value="consultation">Plant Consultation</option>
+                    <option value="supplies">Gardening Supplies</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-gray-700 mb-2" for="message">Additional Details</label>
+                  <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-green-500 focus:ring-2 focus:ring-green-200 outline-none transition-all" placeholder="Tell us about your garden needs"></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="w-full bg-green-600 text-white py-4 rounded-lg hover:bg-green-700 transition duration-300 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i>
+                Schedule Consultation
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="08d6049e-965d-458f-ae5d-b262a689bd2e" data-section-id="08d6049e-965d-458f-ae5d-b262a689bd2e">
+
+<htmlCode>
+<div id="root">
+  <section id="newsletter" class="py-16 bg-green-600">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Icon -->
+        <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-8">
+          <i class="fa-solid fa-envelope-open-text text-3xl text-white"></i>
+        </div>
+
+        <!-- Content -->
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Join Our Green Community</h2>
+        <p class="text-green-50 mb-8 text-lg">Subscribe to receive gardening tips, exclusive offers, and first access to new plant collections.</p>
+
+        <!-- Subscribe Form -->
+        <form class="flex flex-col sm:flex-row gap-4 max-w-2xl mx-auto">
+          <div class="flex-1">
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              class="w-full px-6 py-4 rounded-full border-2 border-transparent focus:border-green-400 focus:ring-2 focus:ring-green-400 outline-none transition-all"
+            />
+          </div>
+          <button 
+            type="submit" 
+            class="bg-green-800 hover:bg-green-900 text-white px-8 py-4 rounded-full transition duration-300 flex items-center justify-center gap-2 whitespace-nowrap"
+          >
+            <i class="fa-solid fa-leaf"></i>
+            Subscribe Now
+          </button>
+        </form>
+
+        <!-- Additional Info -->
+        <p class="text-green-50 mt-6 text-sm">
+          <i class="fa-solid fa-shield-halved mr-2"></i>
+          We respect your privacy. Unsubscribe at any time.
+        </p>
+
+        <!-- Benefits -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          <div class="text-center">
+            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-gift text-xl text-white"></i>
+            </div>
+            <h3 class="text-white font-semibold mb-2">Exclusive Offers</h3>
+            <p class="text-green-50">Special discounts and early-bird sales</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-book-open text-xl text-white"></i>
+            </div>
+            <h3 class="text-white font-semibold mb-2">Expert Tips</h3>
+            <p class="text-green-50">Weekly gardening advice and guides</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-seedling text-xl text-white"></i>
+            </div>
+            <h3 class="text-white font-semibold mb-2">New Arrivals</h3>
+            <p class="text-green-50">First access to latest plant collections</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</htmlCode></element><element id="e813a9b7-f934-453b-b6e0-ab60545568b6" data-section-id="e813a9b7-f934-453b-b6e0-ab60545568b6">
+
+<htmlCode>
+<div id="root">
+  <footer id="footer" class="bg-green-800 text-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <!-- Main Footer Content -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Company Info -->
+        <div class="space-y-4">
+          <div class="flex items-center gap-2 mb-6">
+            <i class="fa-solid fa-leaf text-2xl text-green-400"></i>
+            <span class="text-2xl font-bold">Maali</span>
+          </div>
+          <p class="text-green-100">Bringing nature home with expert garden services and premium plants.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-green-700 hover:bg-green-600 flex items-center justify-center transition duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-green-700 hover:bg-green-600 flex items-center justify-center transition duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-green-700 hover:bg-green-600 flex items-center justify-center transition duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-green-700 hover:bg-green-600 flex items-center justify-center transition duration-300">
+              <i class="fab fa-pinterest"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-green-100 hover:text-white transition duration-300">About Us</a></li>
+            <li><a href="#" class="text-green-100 hover:text-white transition duration-300">Shop Plants</a></li>
+            <li><a href="#" class="text-green-100 hover:text-white transition duration-300">Services</a></li>
+            <li><a href="#" class="text-green-100 hover:text-white transition duration-300">Blog</a></li>
+            <li><a href="#" class="text-green-100 hover:text-white transition duration-300">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Customer Service</h3>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-green-100 hover:text-white transition duration-300">Track Order</a></li>
+            <li><a href="#" class="text-green-100 hover:text-white transition duration-300">Shipping Policy</a></li>
+            <li><a href="#" class="text-green-100 hover:text-white transition duration-300">Returns & Refunds</a></li>
+            <li><a href="#" class="text-green-100 hover:text-white transition duration-300">FAQ</a></li>
+            <li><a href="#" class="text-green-100 hover:text-white transition duration-300">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-location-dot text-green-400"></i>
+              <span class="text-green-100">123 Garden Street, Green City, GC 12345</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-phone text-green-400"></i>
+              <span class="text-green-100">+1 (555) 123-4567</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-envelope text-green-400"></i>
+              <span class="text-green-100">hello@maali.com</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <i class="fa-solid fa-clock text-green-400"></i>
+              <span class="text-green-100">Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-green-700 my-8"></div>
+
+      <!-- Bottom Footer -->
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="text-green-100 text-sm">
+          © 2024 Maali. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <img src="https://placehold.co/40x25" alt="Visa" class="h-6"/>
+          <img src="https://placehold.co/40x25" alt="Mastercard" class="h-6"/>
+          <img src="https://placehold.co/40x25" alt="PayPal" class="h-6"/>
+          <img src="https://placehold.co/40x25" alt="Apple Pay" class="h-6"/>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
